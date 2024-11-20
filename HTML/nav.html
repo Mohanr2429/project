@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="language">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <script>
+        function change_language(){
+        let lan=document.getElementById('SELECT').value;
+        console.log(lan);
+        LANGUAGE1(lan);
+        }
+        function LANGUAGE1(choice){
+            let ch1=document.getElementById('id1');
+            let ch2=document.getElementById('id2');
+            if(choice==='opt1'){
+               ch1.setAttribute('href','../HTML/english.html');
+               ch2.setAttribute('href','../HTML/moveng.html');
+           }
+           else if(choice==='opt2'){
+               ch1.setAttribute('href','../HTML/malyalam.html');
+               ch2.setAttribute('href','../HTML/movmal.html');
+            }
+           else if(choice==='opt3'){
+            ch1.setAttribute('href','../HTML/hindi.html');
+            ch2.setAttribute('href','../HTML/movhin.html');
+           }
+         else{
+            ch1.setAttribute('href','../HTML/tamil.html');
+            ch2.setAttribute('href','../HTML/movtam.html');
+         }
+         event.stopPropagation();
+    }   
+    </script>
+</head>
+<body>
+    <div id="top">
+        <div id="top-left">
+            <h1>SP<i class="fa-brands fa-opera"></i>T HUB</h1>
+        </div>
+        <div id="top-right">
+            <div class="home"><a href="#">HOME</a></div>
+            <div class="about"><a href="about.html">ABOUT</a></div>
+            <div class="contact"><a href="/index.html">LOGIN</a></div>
+            <div class="language">
+                <select name="ENGLISH" id="SELECT" onchange="change_language()">
+                    <option value="opt1">ENGLISH</option>
+                    <option value="opt2">MALAYALAM</option>
+                    <option value="opt3">HINDI</option>
+                    <option value="opt4">TAMIL</option>
+                    
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+    <div class="box-1">
+     <a href="../HTML/english.html" id="id1" target="_blank">
+        <div id="info">
+                <fieldset>
+                    <img src="../MEDIA/image/music-removebg-preview (1).png" alt="IMAGE_1" style="height: 180px;  width: 180px;">
+                <center> <strong><h2>MUSIC</h2></strong></center>
+            </fieldset>
+        </div>
+       </a>
+    </div>
+    <div class="box-2">
+       <a href="../HTML/moveng.html" id="id2" target="_blank">
+        <div id="back">
+                <fieldset>
+                    <img src="../MEDIA/image/images-removebg-preview (1).png" alt="IMAGE_2" style="height: 180px; width: 195px;">
+                <center> <strong><h2>MOVIE</h2></strong></center>
+            </fieldset>
+        </div>
+        </a>
+    </div> 
+    </div>   
+ </body>
+</html>

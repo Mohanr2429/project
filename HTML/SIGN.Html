@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/sign.css">
+    <script>
+        function VALIDATION(){
+            var Phone=document.getElementById("phonenumber").value
+            var flag1=false
+            //phone
+            var phoneflag=false
+            if((Phone>=6000000000)&&(Phone<=9999999999))
+            {
+                flag1=true
+                phoneflag=true
+            }
+            else{
+                document.getElementById("PHONE").innerHTML="Invalid phone number"
+                document.getElementById("PHONE").style.color="red"
+            }
+            var mail=document.getElementById("email").value
+            //mail
+            var mailflag=false
+            var flag21=true
+            var flag22=false
+            for(var i=1;i<mail.length;i++){
+                if((mail[i]>="A")&&(mail[i]<="Z")){
+                    flag21=false
+                }
+                if(mail[i]=="@"){
+                    flag22=true
+                }
+            }
+            if((flag21==true)&&(flag22==true)){
+                    mailflag=true
+                }else{
+                    document.getElementById("EMAIL").innerHTML="Invalid Email id"
+                    document.getElementById("EMAIL").style.color="red"
+                }
+            var pass=document.getElementById("password").value
+            var flag3=false
+            //pass
+            var passflag=false
+            var upper=0
+            var lower=0
+            var num=0
+            var special=0
+            for(var i=0;i<pass.length;i++){
+                if((pass[i]>="A")&&(pass[i]<="Z")){
+                    upper++
+                }else if((pass[i]>="a")&&(pass[i]<="z")){
+                    lower++
+                }else if((pass[i]>="0")&&(pass[i]<="9")){
+                    num++
+                }else{
+                    special++
+                }
+            }
+            if((pass.length>=8)&&(pass.length<=16)&&(upper>=0)&&(lower>=0)&&(num>=0)&&(special>=0)){
+                    flag3=true
+                    passflag=true
+                }else{
+                    document.getElementById("PASSWORD").innerHTML="Invalaid Password"
+                    document.getElementById("PASSWORD").style.color="red"
+                }
+                var pass=document.getElementById("password").value
+                var confirmpassword=document.getElementById("confirm").value
+                //confirm
+                var confirmflag=false
+                var flag4=false
+                if(pass==confirmpassword){
+                    flag4=true
+                    confirmflag=true
+                }else{
+                    document.getElementById("CONFIRM").innerHTML="Invalaid Confirm Password"
+                    document.getElementById("CONFIRM").style.color="red"
+                }
+                //final verfication
+                if((phoneflag==true)&&(mailflag==true)&&(passflag==true)&&(confirmflag==true)){
+                    window.location.href="./success.html"
+                }
+        }
+    </script>
+</head>
+<body>
+    <div class="parent">
+    <div id="sign-page">
+            <div class="form">
+                <div id="head">SIGNIN</div>
+                <input type="text" placeholder="FIRST NAME" id="input1" >
+                <input type="text" placeholder="LAST NAME" id="input2">
+                <input type="text" placeholder="PHONE NUMBER" id="phonenumber">
+                <div id="PHONE"></div>
+                <input type="text" placeholder="EMAIL" id="email">
+                <div id="EMAIL"></div>
+                <input type="text" placeholder="PASSWORD" id="password">
+                <div id="PASSWORD"></div>
+                <input type="text" placeholder="CONFIRM PASSWORD" id="confirm">
+                <div id="CONFIRM"></div>
+                <div id="bottom">
+                    <a href="/index.html" class="back">BACK</a>
+                    <button onclick="VALIDATION()">CONFIRM</button>
+                </div>
+                <p id="error"></p>
+            </div>
+            
+    </div>
+</div>
+</body>
+</html>

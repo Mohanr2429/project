@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/otppp.css">
+    <script>
+        var otp=Math.floor(Math.random()*99999)
+        alert(otp)
+        function otpverification(){
+            var user=document.getElementById("OTP").value
+            if(otp==user){
+                window.location.href="/HTML/success.html"
+            }else{
+                document.getElementById("error").innerHTML="Incorrect OTP"
+                document.getElementById("error").style.color='red'
+            }
+        }
+        function resend(){
+            window.location.href="./otp.html"
+        }
+    </script>
+</head>
+<body>
+    <div id="image">
+        <img src="../MEDIA/image/images__3_-removebg-preview.png" alt="" style="height: 180px;">
+    </div>
+        <div id="text">
+            <h2>OTP VERIFICATION</h2>
+        </div>
+        <div id="in">
+            <input type="text" placeholder="ENTER OTP" id="OTP">
+            <br>
+        </div>
+            <br>
+            <div id="out">
+                <button id="buttons" onclick="otpverification()">VERIFY</button>
+            </div>
+            <div id="error"></div>
+        </div>
+    <div id="base">
+        <p>SEND OTP AGAIN?</p>
+        <br>
+    </div>
+    <div id="bot">
+        <BUtton id="bott" onclick="resend()">RESEND OTP</BUtton>
+    </div>
+</body>
+</html>
