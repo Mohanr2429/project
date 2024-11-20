@@ -1,0 +1,41 @@
+
+#row1{
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    height: 500px;
+    width: 380px;
+    padding-bottom: 30px;
+}
+h3{
+    position: absolute;
+    top: 510px;
+    margin-left: 150px;
+}
+body{
+    background-color: black;
+}
+fieldset{
+    background-color: white;
+    border: none;
+}
+#row2{
+    display: flex;
+    justify-content: space-evenly;
+}
+#row3{
+    display: flex;
+    justify-content: space-evenly;
+}
+#r2{
+    position: absolute;
+    top: 1075px;
+    margin-left: 130px;
+}
+#r3{
+    position: absolute;
+    top: 1640px;
+    margin-left: 110px;
+}
+

@@ -1,0 +1,54 @@
+*{
+    margin: 0%;
+    padding:0%;
+}
+#info{
+    width: 200px;
+}
+#back{
+    border-radius: 10px;
+}
+img{
+    margin-top: 8%%;
+    width: 200px;
+}
+form{
+    display: flex;
+    margin-left: 28%;
+    gap: 10%;
+    border-radius: 10px;
+}
+h1{
+    justify-content: center;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 2%;
+    font-size: 50px;
+    background:linear-gradient(to left,
+    blue,indigo,orange,red,yellow,green,skyblue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+h2{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+body{
+    background-color: black;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+fieldset{
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+#navbar{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin: auto;
+    border: 0cap;
+    backdrop-filter: blur(5px);
+}

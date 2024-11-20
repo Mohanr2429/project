@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        
+        function loginvalidation(){
+            var db={'dhina':1234,'mohan':2429}
+        var username=document.getElementById("user").value
+        var password=document.getElementById("pass").value
+        var userkeys=Object.keys(db)
+        var flage=false
+        for(var i=0;i<userkeys.length;i++){
+            if(username==userkeys[i]){
+                if(db[username]==password){
+                    flage=true
+                }
+            }
+        }
+        if(flage==true){
+            window.location.href="/HTML/nav.html"
+        }
+        else{
+            alert("Invalid Details")
+        }
+        }
+        function usernamee(){
+            window.location.href="/index.html"
+            alert("Username : mohan, Password : 2429 ")
+        }
+    </script>
+</head>
+
+<body>
+    <div id="login-form">
+        <div class="head">
+            <h1>Login</h1>
+        </div>
+        <div class="input-1">
+            <input type="text" placeholder="username" id="user">
+            <i class="fa-solid fa-user profile"></i>
+        </div>
+        <div class="input-1">
+            <input type="password" placeholder="password" id="pass">
+            <i class="fa-solid fa-eye-slash eye"></i>
+        </div>
+        <div class="forget">
+            <a href="../HTML/forget.html" class="for">Forget Password ?</a>
+        </div>
+        <button onclick="loginvalidation()">LOGIN</button>
+        <div class="sign">
+            If you want to <a href="../HTML/SIGN.Html" class="sign-up">SIGN UP</a>
+        </div>
+    </div>
+    <div class="bottom">
+    <i class="fa-solid fa-pencil pencil" onclick="usernamee()"></i>
+    <div id="detail">Click me to Know Details</div>
+</div>
+</body>
+</html>

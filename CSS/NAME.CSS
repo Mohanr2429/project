@@ -1,0 +1,95 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.singersff{
+    height: 350px;
+    width: 255px;
+    justify-content: center;
+    /* border: 2px solid black; */
+    border: transparent;
+}
+.image1{
+    border-radius: 15px;
+    height: 350px;
+    width: 255px;
+    padding: 5px;
+}
+.image1:hover{
+    box-shadow: 1px 1px 10px white;
+}
+.singersff:hover{
+    transform: scale(1.05);
+}
+h3{
+    text-align: center;
+    border-top: 4%;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+.singers{
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+.singers1{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+h1{
+    color: white; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 20px;
+}
+.ACTOR{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.actor1{
+    height: 380px;
+    width: 255px;
+}
+.actor1:hover{
+    transform: scale(1.05);
+}
+.actor2:hover{
+    box-shadow: 1px 1px 10px white;
+}
+.actor2{
+    border-radius: 15px;
+    height: 380px;
+    width: 255px;
+    padding: 2px;
+}
+.actors2:hover{
+    transform: scale(1.05);
+}
+.actors1:hover{
+    box-shadow: 2px 2px 20px white;
+}
+.ACTORS{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.actors1{
+    height: 380px;
+    width: 255px;
+}
+.actors2{
+    border-radius: 15px;
+    height: 380px;
+    width: 255px;
+    padding: 2px;
+}
+a{
+    text-decoration: none;
+}
